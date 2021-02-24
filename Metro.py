@@ -1211,7 +1211,7 @@ while True:
          muhtfark = int(mht)-2
          muhtartis = "EKSİLME"
       else:
-         muhtfark = 0
+         muhtfark = int(mht)-2
          muhtartis = "YOK"
 
       print("Standart Farklar : ",muhtartis , muhtfark)
@@ -1228,10 +1228,12 @@ while True:
          agirlik = -11
       elif hhm <=3819 >=3490 and muhtfark == -1:
          agirlik = -12
+      elif hhm <=3900 >=2500 and muhtfark ==0:
+         agirlik = 10
 
       print("Birim Düzeltmeleri : ", agirlik)
 
-      if agirlik >=0:
+      if agirlik >0:
          agirlikdurum = "ARTI"
       else:
          agirlikdurum = "EKSİ"
