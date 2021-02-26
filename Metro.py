@@ -1,46 +1,102 @@
 import time
+import os
 from sys import exit
 
+os.system("cls") if os.name == "nt" else os.system("clear")
 print("")
-print("*************************************************")
-print("***************** HAVATİS METRO *****************")
-print("****** METB33 Metro Raporu Çözüm Programı *******")
-print("* M29A1 [HE] 900 İlavesiz ve M557 İHTİRAKLI TAPA *")
-print("*************************************************")
+print("************************************************")
+print("**************** HAVATİS METRO *****************")
+print("****** METB33 Metro Raporu Çözüm Programı ******")
+print("*M29A1 [HE] 900 İlavesiz ve M557 İHTİRAKLI TAPA*")
+print("************************************************")
 print("")
 print("////////////// tarikvardar@gmail.com ////////////")
 print("")
-print("************** !!! YASAL UYARI !!! **************")
+print("")
+print("************************************************")
+print("********** !!! YASAL UYARI !!! **********")
 print("")
 print("* Programın kullanımından doğabilecek tüm \n"
-      "sorun ve problemler kullanıcıya aittir.\n"
-      "* Bu şartı kabul etmiyorsanız programı kullanmayın.\n"
-      "* Program verilerin doğru olduğunu beyan etmez.")
+      "  sorumluluk kullanıcıya aittir.\n\n"
+      "* Şartı kabul etmiyorsanız programı kullanmayın.\n\n"
+      "* Program verilerin doğruluğunu garanti etmez!")
 print("")
 print("*************************************************")
 print("")
 
+
 while True:
-   answer = input('Tamam mı? Devam mı? (e/E) (h/H) : ')
+   answer = input('Şartları Kabul Ediyormusunuz? (e/E) (h/H) : ')
    if answer.lower().startswith("e"):
-      print("")
+      os.system("cls") if os.name == "nt" else os.system("clear")
       print("Hoşgeldiniz !! METB33 Çözümüne Başlayalım...")
-      time.sleep(1)
+      time.sleep(1.5)
+      os.system("cls") if os.name == "nt" else os.system("clear")
       print("")
-      hhia = int(input("Havan Hedef İA : "))
-      hhm = int(input("Havan Hedef Mesafesi : "))
-      mvz_rkm = int(input("Mevzi Rakımı : "))
-      bh = input("Barut Hakkını girerken;\n 'Tam değerler için 19 yada 1900'\n "
-                 "ve '4/8 değerler için 1948 yada 19 48 \nyada 19 4/8' şeklinde \n"
-                 "giriş yapınız. BARUT HAKKINI GİRİNİZ : ")
+      hhia = int(input("Havan Hedef İA (milyem) : "))
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("")
+      hhm = int(input("Havan Hedef Mesafesi (metre): "))
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("")
+      mvz_rkm = int(input("Mevzi Rakımı (metre) : "))
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("")
+      bh = input(""" DİKKAT !!! 
+      Barut Hakkını girerken;
+      
+      Yönergeye göre;
+      
+      Yalnızca Tam ve 4/8 değerler girilir.
+      
+      2/8 3/8 gibi değerler girilmez.
+      En yakın tam ya da 4/8'e göre girin.
+       
+      'Tam değerler için
+       17 yada 1700 şeklinde'
+      
+      '4/8 değerler için 
+      1748 yada 17 48 yada 17 4/8 şeklinde'
+                 
+      giriş yapınız.
+       
+      BARUT HAKKINI GİRİNİZ : """)
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("")
+      mht = input("Mühimmat Ağırlık Kare Miktarı : ")
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("")
+      raporbilgi1 = input("Başlık ikinci satır, sağdaki 6 rakam : \n\n")
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("")
+      raporbilgi2 = input("Metin Kısmı Soldaki 6 rakam : \n\n")
+      print("")
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      raporbilgi3 = input("Metin Kısmı Sağdaki 6 rakam : \n\n")
+      print("")
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("Hesaplanıyor .. % 14")
+      time.sleep(0.3)
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("Hesaplanıyor .... % 27")
+      time.sleep(0.3)
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("Hesaplanıyor ...... % 35")
+      time.sleep(0.3)
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("Hesaplanıyor ........ % 64")
+      time.sleep(0.3)
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("Hesaplanıyor ..........% 77")
+      time.sleep(0.3)
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("Hesaplanıyor ............. % 82")
+      time.sleep(0.3)
+      os.system("cls") if os.name == "nt" else os.system("clear")
+      print("Hesaplanıyor ................% 99")
+      time.sleep(1)
+      os.system("cls") if os.name == "nt" else os.system("clear")
 
-      mht = input("Mühimmat Ağırlık Kare Miktarı :")
-
-      raporbilgi1 = input("Başlık ikinci satır, sağdaki 6 rakam : ")
-      raporbilgi2 = input("Metin Soldaki 6 rakam : ")
-      raporbilgi3 = input("Metin Sağdaki 6 rakam : ")
-
-      #time.sleep(1)
       bilgi1 = raporbilgi1.split()
       for i in bilgi1:
          a = i[0:3]
@@ -72,314 +128,213 @@ while True:
       # print("Hava Yoğunluğu : %",hava_yogunluk_yuzdesi)
 
       print("")
-      print("Plan Esasları Hesaplanıyor ...")
       time.sleep(1)
 
       rakim_fark = (mvz_rkm) - (rakim)
 
       if rakim_fark >= 370:
          isi = (hava_isi_yuzdesi) - (0.9)
-         print(isi)
       elif rakim_fark >= 330 <= 369:
          isi = (hava_isi_yuzdesi) - (0.8)
-         print(isi)
       elif rakim_fark >= 270 <= 329:
          isi = (hava_isi_yuzdesi) - (0.7)
-         print(isi)
       elif rakim_fark >= 230 <= 269:
          isi = (hava_isi_yuzdesi) - (0.6)
-         print(isi)
       elif rakim_fark >= 200 <= 229:
          isi = (hava_isi_yuzdesi) - (0.5)
-         print(isi)
       elif rakim_fark >= 170 <= 199:
          isi = (hava_isi_yuzdesi) - (0.4)
-         print(isi)
       elif rakim_fark >= 130 <= 169:
          isi = (hava_isi_yuzdesi) - (0.3)
-         print(isi)
       elif rakim_fark >= 70 <= 129:
          isi = (hava_isi_yuzdesi) - (0.2)
-         print(isi)
       elif rakim_fark >= 30 <= 69:
          isi = (hava_isi_yuzdesi) - (0.1)
-         print(isi)
       elif rakim_fark >= 0 <= 299:
          isi = (hava_isi_yuzdesi) - (0.0)
-         print(isi)
       elif rakim_fark <= -370:
          isi = (hava_isi_yuzdesi) + (0.9)
-         print(isi)
       elif rakim_fark <= -330 >= -369:
          isi = (hava_isi_yuzdesi) + (0.8)
-         print(isi)
       elif rakim_fark <= -270 >= -329:
          isi = (hava_isi_yuzdesi) + (0.7)
-         print(isi)
       elif rakim_fark <= -230 >= -269:
          isi = (hava_isi_yuzdesi) + (0.6)
-         print(isi)
       elif rakim_fark <= -200 >= -229:
          isi = (hava_isi_yuzdesi) + (0.5)
-         print(isi)
       elif rakim_fark <= -170 >= -199:
          isi = (hava_isi_yuzdesi) + (0.4)
-         print(isi)
       elif rakim_fark <= -130 >= -169:
          isi = (hava_isi_yuzdesi) + (0.3)
-         print(isi)
       elif rakim_fark <= -70 >= -129:
          isi = (hava_isi_yuzdesi) + (0.2)
-         print(isi)
       elif rakim_fark <= -30 >= -69:
          isi = (hava_isi_yuzdesi) + (0.1)
-         print(isi)
       elif rakim_fark < 0 >= -29:
          isi = (hava_isi_yuzdesi) + (0.0)
-         print(isi)
       else:
-         print("bitti")
+         print("Rakım farkı -29m dan")
 
       if rakim_fark >= 390:
          yogunluk = (hava_yogunluk_yuzdesi) - (3.9)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 380 <= 389:
          yogunluk = (hava_yogunluk_yuzdesi) - (3.8)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 370 <= 379:
          yogunluk = (hava_yogunluk_yuzdesi) - (3.7)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 360 <= 369:
          yogunluk = (hava_yogunluk_yuzdesi) - (3.6)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 350 <= 359:
          yogunluk = (hava_yogunluk_yuzdesi) - (3.5)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 340 <= 349:
          yogunluk = (hava_yogunluk_yuzdesi) - (3.4)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 330 <= 339:
          yogunluk = (hava_yogunluk_yuzdesi) - (3.3)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 320 <= 329:
          yogunluk = (hava_yogunluk_yuzdesi) - (3.2)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 310 <= 319:
          yogunluk = (hava_yogunluk_yuzdesi) - (3.1)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 300 <= 309:
          yogunluk = (hava_yogunluk_yuzdesi) - (3.0)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 290 <= 299:
          yogunluk = (hava_yogunluk_yuzdesi) - (2.9)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 280 <= 289:
          yogunluk = (hava_yogunluk_yuzdesi) - (2.8)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 270 <= 279:
          yogunluk = (hava_yogunluk_yuzdesi) - (2.7)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 260 <= 269:
          yogunluk = (hava_yogunluk_yuzdesi) - (2.6)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 250 <= 259:
          yogunluk = (hava_yogunluk_yuzdesi) - (2.5)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 240 <= 249:
          yogunluk = (hava_yogunluk_yuzdesi) - (2.4)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 230 <= 239:
          yogunluk = (hava_yogunluk_yuzdesi) - (2.3)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 220 <= 229:
          yogunluk = (hava_yogunluk_yuzdesi) - (2.2)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 210 <= 219:
          yogunluk = (hava_yogunluk_yuzdesi) - (2.1)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 200 <= 209:
          yogunluk = (hava_yogunluk_yuzdesi) - (2.0)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 190 <= 199:
          yogunluk = (hava_yogunluk_yuzdesi) - (1.9)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 180 <= 189:
          yogunluk = (hava_yogunluk_yuzdesi) - (1.8)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 170 <= 179:
          yogunluk = (hava_yogunluk_yuzdesi) - (1.7)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 160 <= 169:
          yogunluk = (hava_yogunluk_yuzdesi) - (1.6)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 150 <= 159:
          yogunluk = (hava_yogunluk_yuzdesi) - (1.5)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 140 <= 149:
          yogunluk = (hava_yogunluk_yuzdesi) - (1.4)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 130 <= 139:
          yogunluk = (hava_yogunluk_yuzdesi) - (1.3)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 120 <= 129:
          yogunluk = (hava_yogunluk_yuzdesi) - (1.2)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 110 <= 119:
          yogunluk = (hava_yogunluk_yuzdesi) - (1.1)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 100 <= 109:
          yogunluk = (hava_yogunluk_yuzdesi) - (1.0)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 90 <= 99:
          yogunluk = (hava_yogunluk_yuzdesi) - (0.9)
-         print(round(yogunluk, 2))
       elif rakim_fark >= 80 <= 89:
          yogunluk = (hava_yogunluk_yuzdesi) - (0.8)
-         print(yogunluk)
       elif rakim_fark >= 70 <= 79:
          yogunluk = (hava_yogunluk_yuzdesi) - (0.7)
-         print(yogunluk)
       elif rakim_fark >= 60 <= 69:
          yogunluk = (hava_yogunluk_yuzdesi) - (0.6)
-         print(yogunluk)
       elif rakim_fark >= 50 <= 59:
          yogunluk = (hava_yogunluk_yuzdesi) - (0.5)
-         print(yogunluk)
       elif rakim_fark >= 40 <= 49:
          yogunluk = (hava_yogunluk_yuzdesi) - (0.4)
-         print(yogunluk)
       elif rakim_fark >= 30 <= 39:
          yogunluk = (hava_yogunluk_yuzdesi) - (0.3)
-         print(yogunluk)
       elif rakim_fark >= 20 <= 29:
          yogunluk = (hava_yogunluk_yuzdesi) - (0.2)
-         print(yogunluk)
       elif rakim_fark >= 10 <= 19:
          yogunluk = (hava_yogunluk_yuzdesi) - (0.1)
-         print(yogunluk)
       elif rakim_fark >= 0 <= 9:
          yogunluk = (hava_yogunluk_yuzdesi) - (0.0)
-         print(yogunluk)
       elif rakim_fark <= -390:
          yogunluk = (hava_yogunluk_yuzdesi) + (3.8)
-         print(yogunluk)
       elif rakim_fark <= -380 >= -389:
          yogunluk = (hava_yogunluk_yuzdesi) + (3.8)
-         print(yogunluk)
       elif rakim_fark <= -370 >= -379:
          yogunluk = (hava_yogunluk_yuzdesi) + (3.7)
-         print(yogunluk)
       elif rakim_fark <= -360 >= -369:
          yogunluk = (hava_yogunluk_yuzdesi) + (3.6)
-         print(yogunluk)
       elif rakim_fark <= -350 >= -359:
          yogunluk = (hava_yogunluk_yuzdesi) + (3.5)
-         print(yogunluk)
       elif rakim_fark <= -340 >= -349:
          yogunluk = (hava_yogunluk_yuzdesi) + (3.4)
-         print(yogunluk)
       elif rakim_fark <= -330 >= -339:
          yogunluk = (hava_yogunluk_yuzdesi) + (3.3)
-         print(yogunluk)
       elif rakim_fark <= -320 >= -329:
          yogunluk = (hava_yogunluk_yuzdesi) + (3.2)
-         print(yogunluk)
       elif rakim_fark <= -310 >= -319:
          yogunluk = (hava_yogunluk_yuzdesi) + (3.1)
-         print(yogunluk)
       elif rakim_fark <= -300 >= -309:
          yogunluk = (hava_yogunluk_yuzdesi) + (3.0)
-         print(yogunluk)
       elif rakim_fark <= -290 >= -299:
          yogunluk = (hava_yogunluk_yuzdesi) + (2.9)
-         print(yogunluk)
       elif rakim_fark <= -280 >= -289:
          yogunluk = (hava_yogunluk_yuzdesi) + (2.8)
-         print(yogunluk)
       elif rakim_fark <= -270 >= -279:
          yogunluk = (hava_yogunluk_yuzdesi) + (2.7)
-         print(yogunluk)
       elif rakim_fark <= -260 >= -269:
          yogunluk = (hava_yogunluk_yuzdesi) + (2.6)
-         print(yogunluk)
       elif rakim_fark <= -250 >= -259:
          yogunluk = (hava_yogunluk_yuzdesi) + (2.5)
-         print(yogunluk)
       elif rakim_fark <= -240 >= -249:
          yogunluk = (hava_yogunluk_yuzdesi) + (2.4)
-         print(yogunluk)
       elif rakim_fark <= -230 >= -239:
          yogunluk = (hava_yogunluk_yuzdesi) + (2.3)
-         print(yogunluk)
       elif rakim_fark <= -220 >= -229:
          yogunluk = (hava_yogunluk_yuzdesi) + (2.2)
-         print(yogunluk)
       elif rakim_fark <= -210 >= -219:
          yogunluk = (hava_yogunluk_yuzdesi) + (2.1)
-         print(yogunluk)
       elif rakim_fark <= -200 >= -209:
          yogunluk = (hava_yogunluk_yuzdesi) + (2.0)
-         print(yogunluk)
       elif rakim_fark <= -190 >= -199:
          yogunluk = (hava_yogunluk_yuzdesi) + (1.9)
-         print(yogunluk)
       elif rakim_fark <= -180 >= -189:
          yogunluk = (hava_yogunluk_yuzdesi) + (1.8)
-         print(yogunluk)
       elif rakim_fark <= -170 >= -179:
          yogunluk = (hava_yogunluk_yuzdesi) + (1.7)
-         print(yogunluk)
       elif rakim_fark <= -160 >= -169:
          yogunluk = (hava_yogunluk_yuzdesi) + (1.6)
-         print(yogunluk)
       elif rakim_fark <= -150 >= -159:
          yogunluk = (hava_yogunluk_yuzdesi) + (1.5)
-         print(yogunluk)
       elif rakim_fark <= -140 >= -149:
          yogunluk = (hava_yogunluk_yuzdesi) + (1.4)
-         print(yogunluk)
       elif rakim_fark <= -130 >= -139:
          yogunluk = (hava_yogunluk_yuzdesi) + (1.3)
-         print(yogunluk)
       elif rakim_fark <= -120 >= -129:
          yogunluk = (hava_yogunluk_yuzdesi) + (1.2)
-         print(yogunluk)
       elif rakim_fark <= -110 >= -119:
          yogunluk = (hava_yogunluk_yuzdesi) + (1.1)
-         print(yogunluk)
       elif rakim_fark <= -100 >= -109:
          yogunluk = (hava_yogunluk_yuzdesi) + (1.0)
-         print(yogunluk)
       elif rakim_fark <= -90 >= -99:
          yogunluk = (hava_yogunluk_yuzdesi) + (0.9)
-         print(yogunluk)
       elif rakim_fark <= -80 >= -89:
          yogunluk = (hava_yogunluk_yuzdesi) + (0.8)
-         print(yogunluk)
       elif rakim_fark <= -70 >= -79:
          yogunluk = (hava_yogunluk_yuzdesi) + (0.7)
-         print(yogunluk)
       elif rakim_fark <= -60 >= -69:
          yogunluk = (hava_yogunluk_yuzdesi) + (0.6)
-         print(yogunluk)
       elif rakim_fark <= -50 >= -59:
          yogunluk = (hava_yogunluk_yuzdesi) + (0.5)
-         print(yogunluk)
       elif rakim_fark <= -40 >= -49:
          yogunluk = (hava_yogunluk_yuzdesi) + (0.4)
-         print(yogunluk)
       elif rakim_fark <= -30 >= -39:
          yogunluk = (hava_yogunluk_yuzdesi) + (0.3)
-         print(yogunluk)
       elif rakim_fark <= -20 >= -29:
          yogunluk = (hava_yogunluk_yuzdesi) + (0.2)
-         print(yogunluk)
       elif rakim_fark <= -10 >= -19:
          yogunluk = (hava_yogunluk_yuzdesi) + (0.1)
-         print(yogunluk)
       elif rakim_fark <= 0 >= -9:
          yogunluk = (hava_yogunluk_yuzdesi) + (0.0)
-         print(yogunluk)
 
       else:
          print("bitti")
@@ -390,7 +345,7 @@ while True:
       print("METB33 Rapor Formunu Aşağıdaki Şekilde Doldurunuz")
       print("*************************************************")
       print("")
-      time.sleep(1)
+      time.sleep(2)
       print("")
       print("/////////////// PLAN ESASLARI ///////////////")
       print("---------------------------------------------")
@@ -892,7 +847,7 @@ while True:
       elif Cetvel_D <=4220 >=3251:
          nat_ruzgar = 1.0
       else:
-         print("Hata")
+         print("1060m ile 4220m mesafe arası çalışır")
 
       if mesafe_yon == "H Baş":
          if hhm <= 2569 >= 2529:
@@ -991,6 +946,7 @@ while True:
       print("")
       print("/// METRO MESAFE DÜZELTMELERİ ///")
       print("--------------------------------------------")
+      print("")
       print(">>>>> Mesafe Rüzgarı <<<<<")
       print("Bilinen Değerler : ", mesafe_yon, round(ruzgar_hizi*mesafe_hiz,2))
       print("Standart Değerler : 0")
@@ -1382,6 +1338,8 @@ while True:
       print("TOPLAM MEVZİ DÜZELTME : ", round(sum(artiliste)+sum(eksiliste),2), "=", round(sum(artiliste)+sum(eksiliste)))
 
       print("")
+      print("************************")
+      print("")
       print("SON RAPOR :")
       zyx = round(ruzgar_hizi*bilesen_hiz*nat_ruzgar)
       if zyx >0:
@@ -1399,10 +1357,11 @@ while True:
       print("MESAFE : ", mesafedeger, round(sum(artiliste)+sum(eksiliste)), "Metre")
 
       print("")
+      print("************************")
 
    elif answer.lower().startswith != "e" or "E":
       print("")
       print("")
-      print("Ok, Sayonnara !! Bye !!")
+      print("Program Sonu ...")
       time.sleep(2)
       exit()
