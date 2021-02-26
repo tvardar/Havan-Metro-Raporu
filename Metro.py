@@ -983,7 +983,7 @@ while True:
             nat_duzeltme = -4.8
          else:
             pass
-      print("Yan Rüzgar : ", ruzgar_hizi, "X", bilesen_hiz, "=", ruzgar_hizi*bilesen_hiz, "X", nat_ruzgar, "=",bilesen_yon, ruzgar_hizi*bilesen_hiz*nat_ruzgar)
+      print("Yan Rüzgar : ", ruzgar_hizi, "X", bilesen_hiz, "=", ruzgar_hizi*bilesen_hiz, "X", nat_ruzgar, "=",bilesen_yon, round(ruzgar_hizi*bilesen_hiz*nat_ruzgar,2))
 
       print("Mesafe Rüzgarı : ", ruzgar_hizi, "X", mesafe_hiz, "=",mesafe_yon, (round(ruzgar_hizi*mesafe_hiz,2)))
 
@@ -1229,7 +1229,7 @@ while True:
       elif hhm <=3819 >=3490 and muhtfark == -1:
          agirlik = -12
       elif hhm <=3900 >=2500 and muhtfark ==0:
-         agirlik = 10
+         agirlik = 0
 
       print("Birim Düzeltmeleri : ", agirlik)
 
@@ -1269,7 +1269,7 @@ while True:
       elif bh == "20 48" or bh == "2048" or bh == "20 4/8":
          ilkhiz = 219.8
 
-      ilkhizhesap = round(198.8 - ilkhiz,1)
+      ilkhizhesap = round(198.8-ilkhiz,1)
 
       if ilkhizhesap >0:
          ilkhizartis = "ARTMA"
@@ -1379,7 +1379,7 @@ while True:
 
       print("TOPLAM (Artı) : ", sum(artiliste))
       print("TOPLAM (Eksi) : ", sum(eksiliste))
-      print("TOPLAM MEVZİ DÜZELTME : ", sum(artiliste)+sum(eksiliste), "=", round(sum(artiliste)+sum(eksiliste)))
+      print("TOPLAM MEVZİ DÜZELTME : ", round(sum(artiliste)+sum(eksiliste),2), "=", round(sum(artiliste)+sum(eksiliste)))
 
       print("")
       print("SON RAPOR :")
