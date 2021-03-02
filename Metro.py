@@ -69,10 +69,10 @@ while True:
       raporbilgi1 = input("Başlık ikinci satır, sağdaki 6 rakam : \n\n")
       os.system("cls") if os.name == "nt" else os.system("clear")
       print("")
-      raporbilgi2 = input("Metin Kısmı Soldaki 6 rakam : \n\n")
+      raporbilgi2 = input("Metin Bölümü 03 ile başlayan Soldaki 6 rakam : \n\n")
       print("")
       os.system("cls") if os.name == "nt" else os.system("clear")
-      raporbilgi3 = input("Metin Kısmı Sağdaki 6 rakam : \n\n")
+      raporbilgi3 = input("Metin Sağdaki 6 rakam : \n\n")
       print("")
       os.system("cls") if os.name == "nt" else os.system("clear")
       print("Hesaplanıyor .. % 14")
@@ -844,10 +844,12 @@ while True:
          nat_ruzgar = 0.8
       elif Cetvel_D <= 3250 >= 2471:
          nat_ruzgar = 0.9
-      elif Cetvel_D <=4220 >=3251:
+      elif Cetvel_D <=4239 >=3251:
          nat_ruzgar = 1.0
+      elif Cetvel_D <=4399 >=4240:
+         nat_ruzgar = 1.1
       else:
-         print("1060m ile 4220m mesafe arası çalışır")
+         print("1060m ile 4399m mesafe arası çalışır")
 
       if mesafe_yon == "H Baş":
          if hhm <= 2569 >= 2529:
@@ -894,8 +896,30 @@ while True:
             nat_duzeltme = 6.1
          elif hhm <= 3539 >= 3490:
             nat_duzeltme = 6.2
+         elif hhm <= 3579 >= 3540:
+            nat_duzeltme = 6.3
+         elif hhm <= 3619 >= 3580:
+            nat_duzeltme = 6.4
+         elif hhm <= 3669 >= 3620:
+            nat_duzeltme = 6.5
+         elif hhm <= 3709 >= 3670:
+            nat_duzeltme = 6.6
+         elif hhm <= 3759 >= 3710:
+            nat_duzeltme = 6.7
+         elif hhm <= 3799 >= 3760:
+            nat_duzeltme = 6.8
+         elif hhm <= 3839 >= 3800:
+            nat_duzeltme = 6.9
+         elif hhm <= 3889 >= 3840:
+            nat_duzeltme = 7.0
+         elif hhm <= 3929 >= 3890:
+            nat_duzeltme = 7.1
+         elif hhm <= 3969 >= 3930:
+            nat_duzeltme = 7.2
+         elif hhm <= 4011 >= 3970:
+            nat_duzeltme = 7.3
          else:
-            pass
+            print("Program 2529 ile 4011 m mesafe aralığında hesaplama yapar")
 
       if mesafe_yon == "T Arka":
          if hhm <= 2589 >= 2529:
@@ -936,8 +960,22 @@ while True:
             nat_duzeltme = -4.7
          elif hhm <= 3649 >= 3580:
             nat_duzeltme = -4.8
+         elif hhm <= 3689 >= 3650:
+            nat_duzeltme = -4.9
+         elif hhm <= 3759 >= 3690:
+            nat_duzeltme = -5.0
+         elif hhm <= 3799 >= 3760:
+            nat_duzeltme = -5.1
+         elif hhm <= 3859 >= 3800:
+            nat_duzeltme = -5.2
+         elif hhm <= 3909 >= 3860:
+            nat_duzeltme = -5.3
+         elif hhm <= 3969 >= 3910:
+            nat_duzeltme = -5.4
+         elif hhm <= 4019 >= 3970:
+            nat_duzeltme = -5.5
          else:
-            pass
+            print("Program 2529 ile 4019 arası mesafede hesaplama yapar")
       print("Yan Rüzgar : ", ruzgar_hizi, "X", bilesen_hiz, "=", ruzgar_hizi*bilesen_hiz, "X", nat_ruzgar, "=",bilesen_yon, round(ruzgar_hizi*bilesen_hiz*nat_ruzgar,2))
 
       print("Mesafe Rüzgarı : ", ruzgar_hizi, "X", mesafe_hiz, "=",mesafe_yon, (round(ruzgar_hizi*mesafe_hiz,2)))
@@ -1060,8 +1098,58 @@ while True:
               yogunlukduzeltme = 8.7
           elif hhm <=3429 >=3410:
               yogunlukduzeltme = 8.8
+          elif hhm <=3449 >=3430:
+              yogunlukduzeltme = 8.9
+          elif hhm <=3469 >=3450:
+              yogunlukduzeltme = 9.0
+          elif hhm <=3489 >=3470:
+              yogunlukduzeltme = 9.1
+          elif hhm <=3509 >=3490:
+              yogunlukduzeltme = 9.2
+          elif hhm <=3539 >=3510:
+              yogunlukduzeltme = 9.3
+          elif hhm <=3559 >=3540:
+              yogunlukduzeltme = 9.4
+          elif hhm <=3579 >=3560:
+              yogunlukduzeltme = 9.5
+          elif hhm <=3599 >=3580:
+              yogunlukduzeltme = 9.6
+          elif hhm <=3619 >=3600:
+              yogunlukduzeltme = 9.7
+          elif hhm <=3649 >=3620:
+              yogunlukduzeltme = 9.9
+          elif hhm <=3669 >=3650:
+              yogunlukduzeltme = 10.0
+          elif hhm <=3689 >=3670:
+              yogunlukduzeltme = 10.1
+          elif hhm <=3709 >=3690:
+              yogunlukduzeltme = 10.2
+          elif hhm <=3729 >=3710:
+              yogunlukduzeltme = 10.3
+          elif hhm <=3759 >=3730:
+              yogunlukduzeltme = 10.4
+          elif hhm <=3779 >=3760:
+              yogunlukduzeltme = 10.5
+          elif hhm <=3799 >=3780:
+              yogunlukduzeltme = 10.6
+          elif hhm <=3819 >=3800:
+              yogunlukduzeltme = 10.7
+          elif hhm <=3839 >=3820:
+              yogunlukduzeltme = 10.9
+          elif hhm <=3859 >=3840:
+              yogunlukduzeltme = 11.0
+          elif hhm <=3889 >=3860:
+              yogunlukduzeltme = 11.1
+          elif hhm <=3909 >=3890:
+              yogunlukduzeltme = 11.2
+          elif hhm <=3929 >=3910:
+              yogunlukduzeltme = 11.3
+          elif hhm <=3949 >=3930:
+              yogunlukduzeltme = 11.4
+          elif hhm <=3969 >=3950:
+              yogunlukduzeltme = 11.6
           else:
-              print("2529 ile 3429 arası mesafeler için hesaplama yapar")
+              print("2529 ile 3969 arası mesafeler için hesaplama yapar")
       else:
           if hhm <= 2529 >= 2491:
               yogunlukduzeltme = -4.8
@@ -1139,8 +1227,60 @@ while True:
               yogunlukduzeltme = -8.4
           elif hhm <= 3429 >= 3410:
               yogunlukduzeltme = -8.5
+          elif hhm <= 3449 >= 3430:
+              yogunlukduzeltme = -8.6
+          elif hhm <= 3469 >= 3450:
+              yogunlukduzeltme = -8.7
+          elif hhm <= 3489 >= 3470:
+              yogunlukduzeltme = -8.8
+          elif hhm <= 3509 >= 3490:
+              yogunlukduzeltme = -8.9
+          elif hhm <= 3539 >= 3510:
+              yogunlukduzeltme = -9.0
+          elif hhm <= 3559 >= 3540:
+              yogunlukduzeltme = -9.1
+          elif hhm <= 3579 >= 3560:
+              yogunlukduzeltme = -9.2
+          elif hhm <= 3599 >= 3580:
+              yogunlukduzeltme = -9.3
+          elif hhm <= 3619 >= 3600:
+              yogunlukduzeltme = -9.4
+          elif hhm <= 3649 >= 3620:
+              yogunlukduzeltme = -9.5
+          elif hhm <= 3669 >= 3650:
+              yogunlukduzeltme = -9.6
+          elif hhm <= 3689 >= 3670:
+              yogunlukduzeltme = -9.7
+          elif hhm <= 3709 >= 3690:
+              yogunlukduzeltme = -9.8
+          elif hhm <= 3729 >= 3710:
+              yogunlukduzeltme = -9.9
+          elif hhm <= 3759 >= 3730:
+              yogunlukduzeltme = -10.0
+          elif hhm <= 3779 >= 3760:
+              yogunlukduzeltme = -10.1
+          elif hhm <= 3799 >= 3780:
+              yogunlukduzeltme = -10.2
+          elif hhm <= 3819 >= 3800:
+              yogunlukduzeltme = -10.3
+          elif hhm <= 3839 >= 3820:
+              yogunlukduzeltme = -10.5
+          elif hhm <= 3859 >= 3840:
+              yogunlukduzeltme = -10.6
+          elif hhm <= 3889 >= 3860:
+              yogunlukduzeltme = -10.7
+          elif hhm <= 3909 >= 3890:
+              yogunlukduzeltme = -10.8
+          elif hhm <= 3909 >= 3890:
+              yogunlukduzeltme = -10.8
+          elif hhm <= 3929 >= 3910:
+              yogunlukduzeltme = -10.9
+          elif hhm <= 3949 >= 3930:
+              yogunlukduzeltme = -11.0
+          elif hhm <= 3969 >= 3950:
+              yogunlukduzeltme = -11.1
           else:
-              print("2529 ile 3429 arası mesafeler için hesaplama yapar")
+              print("2529 ile 3969 arası mesafeler için hesaplama yapar")
 
       if yogunlukduzeltme >= 0:
           yogunlukduzeltmebirim = "ARTMA"
@@ -1176,16 +1316,24 @@ while True:
          agirlik = 10
       elif hhm <=3299 >=2870 and muhtfark ==1:
          agirlik = 11
-      elif hhm <=3619 >=3300 and muhtfark ==1:
+      elif hhm <=3649 >=3300 and muhtfark ==1:
          agirlik = 12
+      elif hhm <=3909 >=3650 and muhtfark ==1:
+         agirlik = 13
+      elif hhm <=4149 >=3910 and muhtfark ==1:
+         agirlik = 14
       elif hhm <=3059 >2500 and muhtfark == -1:
          agirlik = -10
       elif hhm <=3489 >=3060 and muhtfark == -1:
          agirlik = -11
       elif hhm <=3819 >=3490 and muhtfark == -1:
          agirlik = -12
-      elif hhm <=3900 >=2500 and muhtfark ==0:
+      elif hhm <=4129 >=3820 and muhtfark == -1:
+         agirlik = -13
+      elif hhm <=4500 >=2500 and muhtfark ==0:
          agirlik = 0
+      else:
+          print("program 2500 ile 4129m arasını hesaplar")
 
       print("Birim Düzeltmeleri : ", agirlik)
 
@@ -1196,7 +1344,19 @@ while True:
 
       print(agirlikdurum, agirlik)
       print("")
-      if bh == "13" or bh == "1300":
+      if bh == "10" or bh == "1000":
+         ilkhiz = 114.1
+      elif bh == "10 48" or bh == "1048" or bh == "10 4/8":
+         ilkhiz = 147.7
+      elif bh == "11" or bh == "1100":
+         ilkhiz = 151.3
+      elif bh == "11 48" or bh == "1148" or bh == "11 4/8":
+         ilkhiz = 154.9
+      elif bh == "12" or bh == "1200":
+         ilkhiz = 158.5
+      elif bh == "12 48" or bh == "1248" or bh == "12 4/8":
+         ilkhiz = 162.1
+      elif bh == "13" or bh == "1300":
          ilkhiz = 165.7
       elif bh == "13 48" or bh == "1348" or bh=="13 4/8":
          ilkhiz = 169.3
@@ -1218,12 +1378,38 @@ while True:
          ilkhiz = 198.2
       elif bh == "18" or bh == "1800":
          ilkhiz = 201.8
+      elif bh == "18 48" or bh == "1848" or bh == "18 4/8":
+         ilkhiz = 205.4
+      elif bh == "19" or bh == "1900":
+         ilkhiz = 209.0
       elif bh == "19 48" or bh == "1948" or bh == "19 4/8":
          ilkhiz = 212.6
-      elif bh == "20" or bh == "20":
+      elif bh == "20" or bh == "2000":
          ilkhiz = 216.2
       elif bh == "20 48" or bh == "2048" or bh == "20 4/8":
          ilkhiz = 219.8
+      elif bh == "21" or bh == "2100":
+         ilkhiz = 223.4
+      elif bh == "21 48" or bh == "2148" or bh == "21 4/8":
+         ilkhiz = 227.0
+      elif bh == "22" or bh == "2200":
+         ilkhiz = 230.6
+      elif bh == "22 48" or bh == "2248" or bh == "22 4/8":
+         ilkhiz = 234.2
+      elif bh == "23" or bh == "2300":
+         ilkhiz = 237.8
+      elif bh == "23 48" or bh == "2348" or bh == "23 4/8":
+         ilkhiz = 241.4
+      elif bh == "24" or bh == "2400":
+         ilkhiz = 245.0
+      elif bh == "24 48" or bh == "2448" or bh == "24 4/8":
+         ilkhiz = 248.6
+      elif bh == "25" or bh == "2500":
+         ilkhiz = 252.2
+      elif bh == "25 48" or bh == "2548" or bh == "25 4/8":
+         ilkhiz = 255.8
+      else:
+          print("Barut Hakkı 10 tam ile 25 tam 4/8 arası hesaplanır")
 
       ilkhizhesap = round(198.8-ilkhiz,1)
 
@@ -1261,8 +1447,14 @@ while True:
             ilkhizdeger = -24.0
          elif hhm <=3579 >=3450:
             ilkhizdeger = -24.1
+         elif hhm <=3729 >=3580:
+            ilkhizdeger = -24.2
+         elif hhm <=3909 >=3730:
+            ilkhizdeger = -24.3
+         elif hhm <=4169 >=3910:
+            ilkhizdeger = -24.4
          else:
-            print("ARTMA 2500 ile 3500 m arası havan hedef mesafesi içindir")
+            print("ARTMA 2500 ile 4169 m arası havan hedef mesafesi içindir")
       elif ilkhizhesap <0:
          if hhm <= 2509 >=2490:
             ilkhizdeger = 23.1
@@ -1290,8 +1482,12 @@ while True:
             ilkhizdeger = 24.2
          elif hhm <=3669 >=3490:
             ilkhizdeger = 24.3
+         elif hhm <=3929 >=3770:
+            ilkhizdeger = 24.4
+         elif hhm <=4500 >=3930:
+            ilkhizdeger = 24.5
          else:
-            print("2500 ile 3500 m arası havan hedef mesafesi içindir")
+            print("2500 ile 4500 m arası havan hedef mesafesi içindir")
       else:
          print("Hata")
 
