@@ -1411,7 +1411,7 @@ while True:
       else:
           print("Barut Hakkı 10 tam ile 25 tam 4/8 arası hesaplanır")
 
-      ilkhizhesap = round(198.8-ilkhiz,1)
+      ilkhizhesap = round(ilkhiz-198.8,1)
 
       if ilkhizhesap >0:
          ilkhizartis = "ARTMA"
